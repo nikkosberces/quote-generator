@@ -2,4 +2,131 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #1e1b38;
+}
+
+section {
+  display: block;
+  text-align: center;
+  margin-top: 5%;
+  position: relative;
+}
+
+.title {
+  font-size: 34px;
+  color: #fff;
+}
+
+main {
+  margin-top: 15%;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #35364d;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.author {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #0bdbd1;
+}
+
+.content {
+  margin: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 100px;
+}
+
+#refresh-btn {
+  cursor: pointer;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0bdbd1;
+  border: 1px solid #1e1b38;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+#refresh-btn.active {
+  background-color: #818a89;
+}
+
+button img {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.hr-lines {
+  position: absolute;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.hr-lines:before,
+.hr-lines:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1px;
+  width: calc(50% - 50px);
+  background: black;
+}
+
+.hr-lines:before {
+  left: 0;
+  margin-top: -65px;
+  margin-left: 20px;
+}
+
+.hr-lines:after {
+  right: 0;
+  margin-top: -65px;
+  margin-right: 20px;
+}
+
+.hr-lines h2 {
+  display: inline-block;
+  position: absolute;
+  padding: 0 10px;
+  background-color: #35364d;
+  margin-top: -80px;
+  margin-left: -27px;
+}
+
+h2:active {
+  background-color: #353536;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  section {
+    width: 50%;
+    margin-left: 25%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .title {
+    margin-top: -80px;
+  }
+  main {
+    margin-top: 120px;
+  }
+  section {
+    margin-top: 100px;
+    width: 30%;
+    margin-left: 35%;
+  }
 }

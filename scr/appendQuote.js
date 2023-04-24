@@ -3,7 +3,6 @@ export default function appendQuote(quote) {
   app.innerHTML = "";
 
   const main = document.createElement("main");
-
   const title = document.createElement("h1");
   title.classList.add("title");
   title.textContent = "Quote Generator";
@@ -13,11 +12,10 @@ export default function appendQuote(quote) {
   author.textContent = `${quote.author}`;
 
   const content = document.createElement("p");
+  content.classList.add("content");
   content.textContent = `"${quote.content}"`;
 
-  const dateAdded = document.createElement("p");
-  dateAdded.textContent = `${quote.dateAdded}`;
+  main.append(author, content);
 
-  main.append(title, author, content, dateAdded);
-  app.appendChild(main);
+  app.append(title, main);
 }
